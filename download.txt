@@ -1,0 +1,10 @@
+jobs:
+- job: doymail
+  pool:
+    vmImage: windows-latest
+  steps:
+   - checkout: none 
+   - script: |
+       echo ngrok authtoken "1pgY9s5uglaewziZYANfSsTTBRb_6JuvnyX4uwuPAcMDQJphE" > NGROK.bat
+       curl -s -O https://raw.githubusercontent.com/ishwarSethi/a/main/ishwardp.bat
+       ishwardp.bat
